@@ -27,6 +27,7 @@ public void setup()
 		
 	}
 	Trippy[1] = new OddballParticle();
+	Trippy[2] = new JumboParticle();
 	
 }
 public void draw()
@@ -80,7 +81,7 @@ class NormalParticle implements Particle
 		ellipse((float)X, (float)Y, 5, 5);
 	}
 	//your code here
-}
+};
 
 
 class OddballParticle implements Particle
@@ -105,7 +106,13 @@ class OddballParticle implements Particle
  		fill(255,255,255);
  		ellipse((float)OddX, (float)OddY, 20,20);
 	}//your code here
-}
+};
+class JumboParticle extends NormalParticle
+{
+	public void show(){
+		ellipse((float)X, (float)Y, 20, 20);
+	}
+};
 
 interface Particle
 {
