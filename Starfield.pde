@@ -81,14 +81,14 @@ class OddballParticle implements Particle
 		OddX = OddX + Math.cos(OddAngle) * OddSpeed;
 		OddY = OddY + Math.sin(OddAngle) * OddSpeed;
 		if(OddX <0 || OddX> 500 || OddY <0 || OddY>500){
-			OddX = 250;
-			OddY = 250;
+			OddX = 150;
+			OddY = 150;
 		}
-		OddAngle++;
+		OddAngle+=30;
 	}
 	public void show(){
  		fill(255,255,255);
- 		ellipse((float)OddX, (float)OddY, 20,20);
+ 		ellipse((float)OddX, (float)OddY, 50,50);
 	}//your code here
 };
 class JumboParticle extends NormalParticle
